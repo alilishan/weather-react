@@ -13,8 +13,8 @@
 	},
 	"1": {
 		"woeid": "55862649",
-		"textColor": "#003f9a",
-		"backgroundImage": "backgrounds/49-blurr_bg.jpg",
+		"textColor": "#FFF",
+		"backgroundImage": "backgrounds/20-blurr_bg.jpg",
 		"showDate": true
 	}
 }
