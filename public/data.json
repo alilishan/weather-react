@@ -1,0 +1,20 @@
+{
+	"defaults": {
+		"woeid": "1154781",
+		"format": "json",
+		"u": "c",
+		"a": "JtIaCc34",
+		"k": "dj0yJmk9dU1ieU1nbjRhVmF1JmQ9WVdrOVNuUkpZVU5qTXpRbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTFi",
+		"s": "c1bb171f86d85dcb70eefcea434050fa2f67f23a",
+		"interval": 7200000,
+		"textColor": "#000",
+		"backgroundImage": "backgrounds/20-blurr_bg.jpg",
+		"showDate": true
+	},
+	"1": {
+		"woeid": "55862649",
+		"textColor": "#003f9a",
+		"backgroundImage": "backgrounds/49-blurr_bg.jpg",
+		"showDate": true
+	}
+}
