@@ -2,6 +2,6 @@
 
 Display Yahoo weather info pulled from the API 
 
-(https://raw.githubusercontent.com/alilishan/weather-react/master/public/weather-logo.png)
-(https://raw.githubusercontent.com/alilishan/weather-react/master/public/Screenshot.JPG)
+![Image of Yaktocat](https://raw.githubusercontent.com/alilishan/weather-react/master/public/images/weather-logo.png)
+![Image of Yaktocat](https://raw.githubusercontent.com/alilishan/weather-react/master/public/images/Screenshot.JPG)
 
