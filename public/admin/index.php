@@ -1,5 +1,10 @@
 <?php 	
 	
+	if(!isset($_GET['widget_id']) || $_GET['widget_id'] == ''){
+		echo 'Widget ID is Missing!'; 
+		exit;
+	}
+
 	$widgetId = $_GET['widget_id'];
 	$jsonFile = "../data.json";
 	$bgDir = "../backgrounds/";

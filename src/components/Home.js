@@ -4,9 +4,10 @@ import QueryString from 'query-string';
 
 import '../assets/css/app-main.min.css';
 
-import Weather from './Weather.js';
-import Forecast from './Forecast.js';
-import Service from './Weather-Service.js';
+import Weather from './Weather';
+import Forecast from './Forecast';
+import Service from './Weather-Service';
+import { UpdateQueryString } from './Helpers';
 
 
 // import logo from './logo.svg';
@@ -28,7 +29,18 @@ class Home extends Component {
 	constructor(props) {
 		super(props);
 		// console.log(this.props);
+
+		// QueryString.parse(this.props.location.search)
+		const queryString = QueryString.parse(window.location.search); 
 		
+		// Check for Widget ID
+		if(!('widget_id' in queryString)){
+			let URL = window.location.href;
+				URL = UpdateQueryString(URL, 'widget_id', '1');
+
+			window.location.href = URL;	
+		}
+
 		this.state = {
 			isLoading: true,
 			hasErrors: false,
@@ -37,7 +49,7 @@ class Home extends Component {
 			showDate: true,
 			data: {},
 			config: {},
-			params: QueryString.parse(window.location.search) //QueryString.parse(this.props.location.search) // this can be window.location.search 
+			params: queryString
 		};
 	}
 
@@ -104,7 +116,7 @@ class Home extends Component {
 
 	getConfig = async() => {
 		try{
-			const resp = await fetch("./data.json");
+			const resp = await fetch("./data.json?ts=" + new Date().getTime());
 			const config = await resp.json();
 			
 			if (this._isMounted){
