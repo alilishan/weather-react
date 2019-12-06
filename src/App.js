@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// } from "react-router-dom";
 
 
 import Home from './components/Home.js';
-import Admin from './components/Admin.js';
+// import Admin from './components/Admin.js';
 
 
 // https://najens.github.io/weather-icons-react/
@@ -38,22 +38,27 @@ class App extends Component {
 
 	render(){
 		return ( 
-			<Router>
-				<Switch>
-					<Route exact path="/admin" component={Admin} /> 
-
-					<Route
-						exact
-						path='/'
-						render={(props) => <Home {...props} config={this.state.config} />}
-						/>
-
-					{/*<Route exact path="/" component={Home} />*/}
-
-				</Switch>
-			</Router>
+			<Home config={this.state.config} />
 		)	
 	}
+
+	// render(){
+	// 	return ( 
+	// 		<Router>
+	// 			<Switch>
+	// 				{/*<Route path="/admin" component={Admin} /> */}
+
+	// 				<Route
+	// 					path='/'
+	// 					render={(props) => <Home {...props} config={this.state.config} />}
+	// 					/>
+
+	// 				{/*<Route exact path="/" component={Home} />*/}
+
+	// 			</Switch>
+	// 		</Router>
+	// 	)	
+	// }
 
 
 }

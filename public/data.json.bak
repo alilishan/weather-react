@@ -7,7 +7,7 @@
 		"k": "dj0yJmk9dU1ieU1nbjRhVmF1JmQ9WVdrOVNuUkpZVU5qTXpRbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTFi",
 		"s": "c1bb171f86d85dcb70eefcea434050fa2f67f23a",
 		"interval": 7200000,
-		"textColor": "#FFF",
+		"textColor": "#000",
 		"backgroundImage": "backgrounds/20-blurr_bg.jpg",
 		"showDate": true
 	},

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import QueryString from 'query-string'; 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import '../assets/css/app-main.min.css';
 
@@ -27,7 +27,7 @@ class Home extends Component {
 
 	constructor(props) {
 		super(props);
-		// console.log(this.props.config);
+		// console.log(this.props);
 		
 		this.state = {
 			isLoading: true,
@@ -37,7 +37,7 @@ class Home extends Component {
 			showDate: true,
 			data: {},
 			config: {},
-			params: QueryString.parse(this.props.location.search)
+			params: QueryString.parse(window.location.search) //QueryString.parse(this.props.location.search) // this can be window.location.search 
 		};
 	}
 
@@ -73,7 +73,7 @@ class Home extends Component {
 			let data = resp;
 	 		
 	 		if (this._isMounted){
-				await this.setState({ 
+				this.setState({ 
 					isLoading: false, 
 					textColor: 'textColor' in appData ? appData.textColor : appDefaults.textColor,
 					bgImage: 'backgroundImage' in appData ? appData.backgroundImage : appDefaults.backgroundImage,
@@ -104,7 +104,7 @@ class Home extends Component {
 
 	getConfig = async() => {
 		try{
-			const resp = await fetch("/data.json");
+			const resp = await fetch("./data.json");
 			const config = await resp.json();
 			
 			if (this._isMounted){
@@ -125,7 +125,7 @@ class Home extends Component {
 			backgroundImage: `url(${this.state.bgImage})`
 	    }
 		
-		let qstring = QueryString.stringify(this.state.params);
+		// let qstring = QueryString.stringify(this.state.params);
 
 		if(isLoading)
 			return ( <div className="alert alert-info">Loading ... </div> );
@@ -149,7 +149,7 @@ class Home extends Component {
 						</div>
 					</div>
 					
-					<Link to={`/admin?${qstring}`} className="link-fixed">Admin</Link>	
+					{/*<Link to={`./admin?${qstring}`} className="link-fixed">Admin</Link>	*/}
 				</div>
 			)	
 		}

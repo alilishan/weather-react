@@ -23,7 +23,7 @@ class Admin extends Component {
 			<div>
 
 				<span>Admin</span>
-				<Link to={`/?${qstring}`} className="link-fixed">App</Link>
+				<Link to={`./?${qstring}`} className="link-fixed">App</Link>
 			</div>
 		)
 	}

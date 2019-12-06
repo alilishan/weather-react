@@ -1,13 +1,13 @@
 {
     "plugin_box": {
-        "version": "3.1"
+        "version": "4.0"
     },
     "application": {
-        "id": "46622664_weather_3_0",
-        "name": "Weather 3.0",
+        "id": "46622664_weather_4_0",
+        "name": "Weather 4.0",
         "author": "Lishan",
         "description": "Lightweight weather plugin based on Yahoo Weather API.",
-        "version": "3.0",
+        "version": "4.0",
         "thumbnail": "",
         "db_name": "weatherdb",
         "permissions": {
@@ -26,8 +26,8 @@
     },
     "configuration": {
         "screen": {
-            "width": "317px",
-            "height": "218px"
+            "width": "1000px",
+            "height": "1000px"
         }
     },
     "uses-permission": []
